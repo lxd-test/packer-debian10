@@ -45,6 +45,8 @@ bundle exec kitchen test
 ```
 vagrant cloud auth login
 vagrant cloud box create lxd-test/debian10
-vagrant cloud publish --box-version `date +%y.%m.%d` --force --no-private --release lxd-test/debian10 `date +%y.%m.%d` virtualbox builds/virtualbox-debian10.box
+vagrant cloud publish --box-version `date +%y.%m.%d` \
+  --force --no-private --release lxd-test/debian10   \
+  `date +%y.%m.%d` virtualbox builds/virtualbox-debian10.box
 ```
 

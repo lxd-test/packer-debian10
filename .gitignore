@@ -3,3 +3,4 @@
 .ruby-version
 vendor/
 build/*box
+*log

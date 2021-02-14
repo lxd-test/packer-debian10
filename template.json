@@ -64,7 +64,7 @@
           "virtualbox-iso"
         ],
         "inline": [
-          "vagrant box add --name {{ user `build_name` }} --provider virtualbox build/virtualbox-debian10.box -f"
+          "vagrant box add --name debian10 --provider virtualbox build/virtualbox-debian10.box -f"
         ]
       }
     ]

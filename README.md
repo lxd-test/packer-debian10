@@ -8,7 +8,7 @@ https://github.com/geerlingguy/packer-boxes/tree/master/debian10
 
 ## build
 
-```shell
+```
 packer build template.json
 ```
 
@@ -19,7 +19,7 @@ packer build template.json
 - rbenv
 - ruby >=2.4
 
-```shell
+```
 rbenv install -l
 rbenv install 2.6.6
 rbenv local 2.6.6
@@ -27,13 +27,13 @@ rbenv local 2.6.6
 
 ### kitchen-test
 
-```shell
+```
 bundle install --path vendor/bundle
 ```
 
 ### test
 
-```shell
+```
 bundle exec kitchen list
 bundle exec kitchen converge
 bundle exec kitchen verify
@@ -42,7 +42,7 @@ bundle exec kitchen destroy
 
 all in one 
 
-```shell
+```
 bundle exec kitchen test
 ```
 

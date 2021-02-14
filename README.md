@@ -53,6 +53,6 @@ vagrant cloud auth login
 vagrant cloud box create lxd-test/debian10
 vagrant cloud publish --box-version `date +%y.%m.%d` \
   --force --no-private --release lxd-test/debian10   \
-  `date +%y.%m.%d` virtualbox builds/virtualbox-debian10.box
+  `date +%y.%m.%d` virtualbox build/virtualbox-debian10.box
 ```
 

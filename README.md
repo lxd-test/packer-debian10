@@ -48,11 +48,33 @@ bundle exec kitchen test
 
 ## publish box
 
+### login
+
+If you have 2FA enabled, then generate a [token](https://app.vagrantup.com/settings/security) in app.vagrantup.com and use `ATLAS_TOKEN` environment variable.
+
+If you don't have 2FA enabled, you can generate a token directly from `vagrant` cli:
+
 ```shell
 vagrant cloud auth login
+```
+
+### upload the box
+
+On this example
+
+```
 vagrant cloud box create lxd-test/debian10
 vagrant cloud publish --box-version `date +%y.%m.%d` \
   --force --no-private --release lxd-test/debian10   \
   `date +%y.%m.%d` virtualbox build/virtualbox-debian10.box
+```
+
+For your own org
+
+```
+vagrant cloud box create <org>/<box>
+vagrant cloud publish --box-version <version> \
+  --force --no-private --release <org>/<box>   \
+  <version>  virtualbox <file.box>
 ```
 
